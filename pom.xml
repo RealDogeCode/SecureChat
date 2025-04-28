@@ -17,6 +17,8 @@
     <modules>
         <module>Server</module>
         <module>Client</module>
+        <module>Common</module>
+        <module>Common</module>
     </modules>
 
     <!-- Proprietà comuni -->

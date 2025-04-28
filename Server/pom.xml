@@ -12,7 +12,7 @@
 
     <groupId>Server</groupId>
     <artifactId>Server</artifactId>
-    <packaging>jar</packaging> <!-- Packaging del modulo è JAR -->
+    <packaging>jar</packaging>
 
     <name>Server</name>
     <description>First module that generates its own JAR</description>
@@ -27,20 +27,6 @@
 
     <build>
         <plugins>
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-jar-plugin</artifactId>-->
-<!--                <configuration>-->
-<!--                    &lt;!&ndash; Configurazioni specifiche per il JAR &ndash;&gt;-->
-<!--                    <archive>-->
-<!--                        <manifest>-->
-<!--                            <addClasspath>true</addClasspath>-->
-<!--                            <mainClass>org.Server.Main</mainClass>-->
-<!--                        </manifest>-->
-<!--                    </archive>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
