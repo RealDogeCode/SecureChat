@@ -1,4 +1,4 @@
-package org.SecureChat;
+package org.SecureChat.Common;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

@@ -1,13 +1,11 @@
-package org.Server;
-
-import org.apache.commons.cli.*;
-
 import java.io.*;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketException;
 import java.util.logging.*;
+
+import org.apache.commons.cli.*;
 
 public class Main {
 
@@ -64,18 +62,16 @@ public class Main {
         catch (Exception e)
         {
             serverLogger.severe(e.getMessage());
-        };
+        }
     }
 }
 
 
 class UserThread extends Thread{
     private final BufferedReader in;
-    private final PrintWriter out;
     private final Socket socket;
     public UserThread(Socket socket, BufferedReader in, PrintWriter out){
         this.in = in;
-        this.out = out;
         this.socket = socket;
     }
     @Override
