@@ -1,6 +1,6 @@
-package org.SecureChat;
+package org.SecureChat.packets;
 
-public class ResponsePacket extends Packet{
+public class ResponsePacket extends Packet {
     @Override
     public Byte getType() {
         return 0x0;

@@ -1,4 +1,7 @@
-package org.SecureChat;
+package org.SecureChat.utils;
+
+import org.SecureChat.packets.Packet;
+import org.SecureChat.PacketField;
 
 import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;

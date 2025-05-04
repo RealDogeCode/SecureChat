@@ -1,6 +1,6 @@
-package org.SecureChat;
+package org.SecureChat.packets;
 
-public class CommandPacket extends Packet{
+public class CommandPacket extends Packet {
 
     @Override
     public Byte getType() {

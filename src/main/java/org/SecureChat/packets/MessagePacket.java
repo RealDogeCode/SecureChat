@@ -1,6 +1,8 @@
-package org.SecureChat;
+package org.SecureChat.packets;
 
-public class MessagePacket extends Packet{
+import org.SecureChat.PacketField;
+
+public class MessagePacket extends Packet {
     @PacketField
     String message;
 

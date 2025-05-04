@@ -1,4 +1,7 @@
-package org.SecureChat;
+package org.SecureChat.packets;
+
+import org.SecureChat.utils.PacketDeserializer;
+import org.SecureChat.utils.PacketSerializer;
 
 public abstract class Packet {
     /**
