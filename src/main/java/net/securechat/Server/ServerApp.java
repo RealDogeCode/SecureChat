@@ -34,7 +34,7 @@ public class ServerApp {
 
             if(user.currentRoom.isSystemRoom) {
                 if(user.currentRoom.name.equals("LOGIN")){
-                    if (message.matches("^(GET|POST|HEAD|PUT|OPTIONS) /.* HTTP/1\\.[01]$")) {
+                    if (message.matches("^(GET|PUT|POST|DELETE|OPTIONS|HEAD) .* (HTTP)/.*")) {
                         Main.LOGGER.info("Probabile richiesta HTTP: " + message);
                         user.disconnect();
                         return;
