@@ -3,6 +3,7 @@ package net.securechat.Server;
 import net.securechat.Server.events.onRoomSwitch;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.UUID;
@@ -11,6 +12,7 @@ public class User {
     public onRoomSwitch onRoomSwitch;
 
     Socket socket;
+    Thread thread;
     PrintWriter out;
     BufferedReader in;
 
@@ -37,6 +39,10 @@ public class User {
 
     public void setMuted(boolean muted) {
         isMuted = muted;
+    }
+    public void disconnect() throws IOException {
+        thread.interrupt();
+        socket.close();
     }
 
     public void sendMessage(String message) {

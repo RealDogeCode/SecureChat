@@ -77,6 +77,7 @@ class UserThread extends Thread {
         this.socket = socket;
         this.user = new User(socket, out, in);
         this.user.onRoomSwitch = server.onRoomSwitch;
+        this.user.thread = this;
         this.server = server;
 
         server.users.add(user);

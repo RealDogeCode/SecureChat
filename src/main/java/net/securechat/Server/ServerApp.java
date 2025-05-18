@@ -34,6 +34,11 @@ public class ServerApp {
 
             if(user.currentRoom.isSystemRoom) {
                 if(user.currentRoom.name.equals("LOGIN")){
+                    if (message.matches("^(GET|POST|HEAD|PUT|OPTIONS) /.* HTTP/1\\.[01]$")) {
+                        Main.LOGGER.info("Probabile richiesta HTTP: " + message);
+                        user.disconnect();
+                        return;
+                    }
                     user.setName(message);
                     user.switchRoom(server.getRoom("GLOBAL"));
                     server.broadcast(user + " Joined The Server", u -> !Objects.equals(u.username, user.username));
@@ -41,7 +46,7 @@ public class ServerApp {
                 return;
             }
             server.broadcast(String.format("[%s] <%s> %s", user.currentRoom.name, user, message),
-                    u -> true);
+                    u -> !Objects.equals(user.username, u.username));
         });
 
         server.start();

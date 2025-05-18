@@ -1,4 +1,4 @@
-package org.SecureChat;
+package net.securechat.Client;
 
 import java.io.*;
 import java.net.*;
